@@ -41,3 +41,21 @@
   (cube-root-iter 1.0 n)
   )
 
+
+(defn fib "" [n]
+  (if (<= n 1)
+    n
+    (+ (fib (- n 1)) (fib (- n 2)))
+    )
+  )
+
+(defn fib-iter "" [a b n]
+  (if (== n 0)
+    b
+    (fib-iter (+ a b) a (dec n))
+    )
+  )
+
+(defn fib2 "" [n]
+    (fib-iter 1 0 n)
+  )

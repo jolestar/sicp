@@ -15,3 +15,9 @@
   (is (<= (abs (- 2 (cube-root 8))) 0.0001))
   (is (<= (abs (- 3 (cube-root 27))) 0.0001))
   )
+
+(deftest fib-test
+  (testing "fib-test"
+    (is (= 2 (fib 3)))
+    )
+  )
