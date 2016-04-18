@@ -57,5 +57,26 @@
   )
 
 (defn fib2 "" [n]
-    (fib-iter 1 0 n)
+  (fib-iter 1 0 n)
   )
+
+(defn f111 "1.11" [n]
+  (if (< n 3)
+    n
+    (+ (f111 (- n 1)) (f111 (- n 2)) (f111 (- n 3)))
+    )
+  )
+
+(defn f111_iter "" [a b c n]
+  (cond
+    (== n 0) c
+    (== n 1) b
+    (>= n 2) (f111_iter (+ a b c) a b (dec n))
+    )
+  )
+
+(defn f111_v2 "1.11 for iter" [n]
+  (f111_iter 2 1 0 n)
+  )
+
+
